@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ElogbookConfig(AppConfig):
+class ELogbookConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'elogbook'
+    name = 'e_logbook'
