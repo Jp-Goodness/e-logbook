@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="{% static "e_logbook/css/all.mim.css" %}">
     <link rel="stylesheet" href="{% static "e_logbook/css/owl.carousel.mim.css" %}">
     <link rel="stylesheet" href="{% static "e_logbook/css/style.css" %}">
+
+    <!-- <link rel="stylesheet" href="{% static "e_logbook/css/all.min.css" %}">
+    <link rel="stylesheet" href="{% static "e_logbook/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "e_logbook/css/bootstrap.css" %}" />
+    <link href="{% static "e_logbook/css/font-awesome.min.css" %}" rel="stylesheet" />
+    <link href="{% static "e_logbook/css/flexslider.css" %}" rel="stylesheet" />
+    <link href="{% static "e_logbook/css/style.css" %}" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' /> -->
+
+
+
     <title>E-logbook || {% block title %}{% endblock title %}</title>
 </head>
 <body>
@@ -15,9 +26,14 @@
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">E-logbook App</a>
+
+          <!-- <button class="btn btn-success" type="submit">Sign Up</button>
+          <button class="btn btn-success" type="submit">Login</button> -->
+
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
           <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">E-logbook App</h5>
@@ -31,17 +47,23 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">About</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Send feedback</a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    User
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">My Logbook</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
                   </ul>
                 </li>
               </ul>
@@ -59,7 +81,7 @@
       
     {% endblock main-content %}
 
-    <footer>
+    <footer class="container-fluid bg-dark text-center p-2 mt-5 text-white fixed-bottom">
      Copyright : 2022 || Developed by --   
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -68,5 +90,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script script="{% static "e_logbook/js/owl.carousel.min.js" %}"></script>
     <script script="{% static "e_logbook/js/all.min.js" %}"></script>
+
+
+    <script src="{% static 'e_logbook/js/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'e_logbook/js/bootstrap.js' %}"></script>
+    <script src="{% static 'e_logbook/js/jquery.flexslider.js' %}"></script>
+    <script src="{% static 'e_logbook/js/scrollReveal.js' %}"></script>
+    <script src="{% static 'e_logbook/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'e_logbook/js/custom.js' %}"></script>
+
 </body>
 </html>
