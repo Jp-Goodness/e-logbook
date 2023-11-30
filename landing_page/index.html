@@ -27,7 +27,53 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
- 
+  <style>
+    /* Popup Styles */
+    .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup {
+        position: relative;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    /* Close Icon Styles */
+    .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    /* Button Styles */
+    .popup button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #ffc107; /* Dull yellow */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
 </head>
 
 <body>
@@ -83,7 +129,7 @@
       <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
         <h1 class="text-center">Record your Industrial Training activiy with ease</h1>
         <h2 class="text-center">Say no to hard copy Logbook! With this app, student will be able to record their daily activity and supervisors will be able to assess their activities.</h2>
-        <a href="#" class="btn-get-started scrollto">Get Started</a>
+        <a href="#" class="btn-get-started scrollto" id="getStartedBtn">Get Started</a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
         <img src="assets/img/hero-img.png" class="img-fluid" alt="">
@@ -93,6 +139,22 @@
 
   </section><!-- End Hero -->
 
+<!-- Popup Container -->
+<div id="popupContainer" class="popup-container">
+  <!-- Popup Content -->
+  <div class="popup">
+      <span class="close-icon" onclick="closePopup()">&times;</span>
+      <p>Sign up to continue. 
+      </p>
+      <hr>
+      <p>Sign up as...</p>
+      <button onclick="location.href='student_reg.html'">Student</button>
+      <button onclick="location.href='school_superviror_reg.html'">School Supervisor</button>
+      <button onclick="location.href='it_supervisor_reg.html'">IT Supervisor</button>
+      <hr>
+      <p>Visit the login page if you already have a account</p>
+  </div>
+</div>
   <main id="main">
 
     
@@ -437,6 +499,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // JavaScript to show the popup when the button is clicked
+    document.getElementById('getStartedBtn').addEventListener('click', function () {
+        document.getElementById('popupContainer').style.display = 'flex';
+    });
+
+    // JavaScript to close the popup
+    function closePopup() {
+        document.getElementById('popupContainer').style.display = 'none';
+    }
+</script>
 
 </body>
 
